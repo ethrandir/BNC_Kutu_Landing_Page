@@ -1,0 +1,532 @@
+*{
+	list-style-type: none;
+/* 	overflow-x: hidden; */
+}
+body {
+	margin: 0;
+	background-color: #ffffff;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 300;
+
+ }
+
+ 
+ .language {
+	background-image: url(images/langback.png);
+	background-color: black;
+	padding-top: 5px;
+	padding-right: 25px;
+	text-align: right;
+	box-shadow:0 0 15px -1px  #90a5b6;
+ }
+
+ .flag {
+	display: inline-block;
+	margin-right: 5px;
+	width: 16px;
+	height: 12px;
+	border: 1px solid black;
+ }
+ 
+ .gbr {
+	background-image: url(images/gbr.svg);
+	background-size: cover;
+ }
+
+ .fra {
+	background-image: url(images/fra.svg);
+	background-size: cover;
+ }
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+	
+ }
+
+ header {
+	background: #ffffff;
+	box-shadow:0 0 15px  #90a5b6;
+	z-index: 10;
+	position: sticky;
+	top: 0px;
+ }
+ 
+ header::after {
+	content: "";
+	display: table;
+	clear: both;
+ }
+ 
+ .logo {
+	float: left;
+ }
+ 
+ nav {
+	float: right;
+ }
+ 
+ul.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+ }
+ 
+ul.menu li {
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 30px;
+	position: relative;
+ }
+ 
+ul.menu li a {
+	text-decoration: none;
+	color: #2a2972;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 16px;
+	transition: all 0.3s;
+ }
+ 
+
+ nav a:hover {
+	color:#1c8a2b;
+ }
+ 
+ nav a::before {
+	content: "";
+	display: block;
+	height: 5px;
+	width: 100%;
+	background-color: #1c8a2b;
+ 
+	position: absolute;
+	top: 0;
+	width: 0%;
+ }
+ 
+ nav a:hover::before {
+	width: 100%;
+	transition: 0.3s;
+ }
+
+i.fa-solid {
+	display: none;
+	color: #ffffff;
+	margin: 15px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+@media (max-width: 600px) {
+	ul.menu li {
+		display: block;
+		text-align: left;
+	 }
+	.nav-links {
+		width: 0;
+		position: absolute;
+		background: #1c8a2b;
+		height: 100vh;
+		top: 0;
+		right: 0;
+		overflow: initial;
+		text-align: left;
+		transition: 1s;
+	}
+	.nav-links nav {
+		text-align: left;
+	}
+
+	ul.menu li a {
+		text-decoration: none;
+		color: #ffffff;
+		font-size: 20px;
+	 }
+	 ul.menu li {
+		margin-top: 20px;
+		border-bottom: 2px solid #7c8e9d;
+	 }
+	
+	i.fa-solid {
+		display: block;
+	}
+	i.fa-bars{
+		color: #15202b;
+		float: right;
+		padding-top: 15px;
+	}
+}
+
+ /* BANNER */
+
+.banner {
+	background-image: url(images/banner.png);
+	background-repeat: no-repeat;
+	padding-top: 30px;
+	padding-left: 130px;
+	min-height: 500px;
+	background-size: cover;
+	margin-bottom: -30px;
+}
+
+.banner-baslik {
+	max-width: 400px;
+	-webkit-max-width: 400px;
+	font-size: 50px;
+	color: #1c8a2b;
+}
+
+.banner-aciklama {
+	max-width: 350px;
+	color: #698a6e;
+	font-size: 16px;
+}
+
+.media-banner {
+	display: none;
+}
+
+@media (max-width: 600px) {
+	.banner {
+		padding: 30px 0;
+		text-align: center;
+	}
+
+	.banner-baslik {
+		width: 90%;
+		font-size: 24px;
+		margin: auto;
+	}
+	.banner-aciklama {
+		width: 90%;
+		color: #698a6e;
+		font-size: 16px;
+		margin: auto;
+		padding-top: 30px;
+	}
+	.media-banner {
+		width: 80%;
+		margin: auto;
+		display: block;
+	}
+	
+}
+
+/* HAKKIMIZDA */
+
+.hakkimizda {
+	width: 100%;
+	background-color: #ffffff;
+}
+
+section.hakkimizda{
+	width: 100%;
+}
+
+.hakkimizda-container {
+	width: 70%;
+	margin: auto;
+	text-align: center;
+	padding: 50px 0;
+}
+
+.hakkimizda-baslik{
+	width: 100%;
+	font-size: 30px;
+	padding-bottom: 50px;
+	margin-bottom: 40px;
+	color: #1c8a2b;
+	border-bottom: 2px solid #1c8a2b;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.hakkimizda-aciklama {
+	width: 80%;
+	padding-top: 30px;
+	margin: 10px auto;
+	line-height: 2;
+	color: #1c8a2b;
+}
+
+
+/* ÜRÜNLER */
+
+.urunler a {
+	text-decoration: none;
+}
+
+.urunler-baslik {
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: #1c8a2b;
+}
+
+main.urunler {
+	display: grid;
+	width: 80%;
+	margin: 80px auto 40px;
+	gap: 40px;
+	text-align: center;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.urunler-baslik a {
+	color: #1c8a2b;
+	text-decoration: none;
+}
+
+.urun-kart {
+	height: 350px;
+	box-shadow:0 0 10px 0px #bcc8d1;
+	border-radius: 15px;
+	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.miknatis {
+	background-image: url(images/miknatis.png);
+}
+
+.kutu-kapak {
+	background-image: url(images/kutu-kapak.png);
+}
+
+.cekmeceli {
+	background-image: url(images/cekmeceli.png);
+}
+
+.cikolata {
+	background-image: url(images/cikolata.png);
+}
+
+.taki {
+	background-image: url(images/taki.png);
+}
+
+.promosyon {
+	background-image: url(images/bloknot.png);
+}
+
+.urun-aciklama {
+	padding: 10px;
+	background-color: #ffffffb8;
+	color: #1c8a2b;
+	font-size: 18px;
+	opacity: 0;
+	transition: 0.3s;
+}
+
+.urun-kart:hover {
+	box-shadow:0 0 10px 5px #7c8e9d;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+
+.urun-kart:hover .urun-aciklama{
+	opacity:100%;
+}
+
+@media (max-width: 600px) {
+	main.urunler {
+		display: block;
+		width: 90%;
+		margin: 80px auto 40px;
+	}
+	.urun-kart {
+		margin-top: 40px;
+	}
+}
+
+
+/* ÜRETİM */
+
+.uretim-container {
+	width: 50%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	text-align: center;
+}
+
+.columntwo {
+	grid-column: 2/3;
+}
+
+.columnone {
+	grid-column: 1/2;
+}
+
+.uretim-kart {
+	padding: 20px;
+	width: 250px;
+	margin: auto;
+	border: 2px solid #5a5a5a;
+	background-image: radial-gradient(#ffffff 60%,#d4fbd9);
+	text-align: center;
+	color: #1c8a2b;
+	border-radius: 10px;
+}
+
+.ok1 {
+	background-image: url(images/ok1.png);
+	background-size:200px;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+.ok2 {
+	background-image: url(images/ok2.png);
+	background-size:200px;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+@media (max-width: 600px) {
+	.uretim-container {
+		width: 90%;
+		margin: auto;
+		display: block;
+		text-align: center;
+	}
+
+	.uretim-kart {
+		padding: 20px;
+		width: 80%;
+		margin: 15px auto;
+		text-align: center;
+		color: #1c8a2b;
+		border-radius: 10px;
+	}
+
+	.disappear {
+		display: none;
+	}
+
+
+
+}
+
+
+/* İLETİŞİM */
+
+.iletisim {
+	width: 70%;
+	padding: 50px;
+	margin:100px auto;
+	text-align: center;
+}
+
+.iletisim-p {
+	color: #000;
+	font-size: 50px;
+}
+
+.iletisim p {
+	color: #5a5a5a;
+}
+
+.iletisim-mail {
+	font-size: 13px;
+	color: #b5b5b5;
+	font-weight: 400;
+}
+
+
+.social-container {
+	margin-top: 70px;
+}
+
+.social {
+	padding: 10px;
+	margin: 30px 30px 0;
+	color: #1c8a2b;
+	font-size: 30px;
+	transition: all .2s ease;
+}
+
+.social:hover {
+	color: #000;
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+	.social {
+		padding: 10px;
+		margin: 30px 10px 0;
+		color: #1c8a2b;
+	}
+
+
+}
+
+
+/* FOOTER */
+
+footer {
+	background-color: #000;
+	color: #ffffff;
+}
+
+.f-logo , .f-urun , .f-adres , .f-iletisim {
+	margin: 0;
+	padding: 0;
+}
+
+.footer-grid {
+	padding: 30px 0 ;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	column-gap: 30px;
+}
+
+.f-adres {
+	margin-top: 14px;
+}
+
+.copyright {
+	font-size: 14px;
+	color: #90a5b6;
+	margin: auto;
+	text-align: center;
+}
+
+@media (max-width: 600px) {
+	.footer-grid {
+		width: 100%;
+		padding: 30px 0 ;
+		display: block;
+		margin: auto;
+		text-align: center;
+	}
+	.m-footer {
+		width: 80%;
+		margin:auto;
+		padding: 20px 0;
+		margin-top: 20px;
+		text-align: center;
+	}
+	.text-al-l {
+		text-align: left;
+		margin: 0;
+		margin-left: 20px;
+	}
+	footer ul {
+		margin: 0px;
+		padding: 0;
+	}
+
+
+}

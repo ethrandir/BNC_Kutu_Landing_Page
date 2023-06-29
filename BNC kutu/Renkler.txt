@@ -1,0 +1,2 @@
+Logo ve Anarenk = #15202B
+Açık renk 	    = #f4f9ff
